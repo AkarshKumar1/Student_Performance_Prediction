@@ -13,11 +13,41 @@ $command = "\"$python\" \"$script\" $math $reading $writing 2>&1";
 $output = shell_exec($command);
 $output = trim($output);
 
-// 🔥 Insert into DB
-$sql = "INSERT INTO students (math, reading, writing, prediction)
-        VALUES ($math, $reading, $writing, '$output')";
-$conn->query($sql);
+// Split output
+$lines = explode("\n", $output);
 
-echo "<h2 style='color: green;'>Prediction: $output</h2>";
-echo "<br><a href='dashboard.php'>View Dashboard</a>";
+// Get grade only
+$grade = trim($lines[0]);
+
+// Insert into DB
+$sql = "INSERT INTO students (math, reading, writing, prediction)
+        VALUES ($math, $reading, $writing, '$grade')";
+
+$conn->query($sql);
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Prediction Result</h2>
+
+    <div class="result">Grade: <?php echo $grade; ?></div>
+
+    <?php
+    if (isset($lines[1])) {
+        echo "<div class='result risk'>" . trim($lines[1]) . "</div>";
+    }
+    ?>
+
+    <br>
+    <a href="index.php">← Go Back</a>
+</div>
+
+</body>
+</html>

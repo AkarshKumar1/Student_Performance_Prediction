@@ -1,0 +1,163 @@
+/* 🔹 Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Main Container (Card) */
+.container {
+    width: 500px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Form Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 🔹 Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 🔹 Result Text */
+.result {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 🔹 Risk Message */
+.risk {
+    color: red;
+}
+
+/* 🔹 Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: #28a745;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background: #218838;
+}
+
+/* 🔹 Table Wrapper (IMPORTANT FIX) */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* 🔹 Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 500px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 🔹 Header Row */
+th {
+    background: #007bff;
+    color: white;
+}
+
+/* 🔹 Alternate Rows */
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* 🔹 Prediction Colors */
+td span {
+    font-weight: bold;
+}
+
+td span.green {
+    color: green;
+}
+
+td span.blue {
+    color: blue;
+}
+
+td span.red {
+    color: red;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* 🔥 Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.card.total { background: #333; }
+.card.a { background: green; }
+.card.b { background: blue; }
+.card.c { background: red; }
+
+/* 🔍 Search Box */
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}

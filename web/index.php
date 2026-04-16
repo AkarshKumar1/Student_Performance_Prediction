@@ -2,18 +2,21 @@
 <html>
 <head>
     <title>Student Prediction</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Student Performance Prediction</h2>
+<div class="container">
+    <h2>🎓 Student Prediction</h2>
 
-<form action="predict.php" method="post">
-    Math: <input type="number" name="math" required><br><br>
-    Reading: <input type="number" name="reading" required><br><br>
-    Writing: <input type="number" name="writing" required><br><br>
-    
-    <input type="submit" value="Predict">
-</form>
+    <form action="predict.php" method="post">
+        <input type="number" name="math" placeholder="Math Score" required>
+        <input type="number" name="reading" placeholder="Reading Score" required>
+        <input type="number" name="writing" placeholder="Writing Score" required>
+        
+        <button type="submit">Predict</button>
+    </form>
+</div>
 
 </body>
 </html>
