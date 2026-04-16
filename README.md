@@ -49,15 +49,16 @@ STUDENT_PERFORMANCE_PREDICTION/
 │ └── train_model.py
 │
 ├── screenshots/
-│ ├── dashboard.png
-│ ├── input.png
-│ └── prediction.png
+│ ├── input-ui.png
+│ ├── prediction-ui.png
+│ └── dashboard-ui.png
 │
 ├── web/
 │ ├── dashboard.php
 │ ├── db.php
 │ ├── index.php
-│ └── predict.php
+│ ├── predict.php
+│ └── style.css
 │
 └── data_preprocessing.py
 ```
@@ -67,13 +68,13 @@ STUDENT_PERFORMANCE_PREDICTION/
 ## 📸 Screenshots
 
 ### 🔹 Input Page
-![Input](screenshots/input.png)
+![Input](screenshots/input-ui.png)
 
 ### 🔹 Prediction Output
-![Prediction](screenshots/prediction.png)
+![Prediction](screenshots/prediction-ui.png)
 
 ### 🔹 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard-ui.png)
 
 ---
 
@@ -83,6 +84,7 @@ STUDENT_PERFORMANCE_PREDICTION/
 - **PHP**
 - **MySQL**
 - **HTML/CSS**
+- **JavaScript (Basic DOM manipulation for filtering)**
 
 ---
 
@@ -92,11 +94,28 @@ STUDENT_PERFORMANCE_PREDICTION/
 ```bash
 git clone https://github.com/AkarshKumar1/Student_Performance_Prediction.git
 ```
+### 2. Install Python Libraries
+```bash
+pip install pandas scikit-learn joblib
+```
+### 3. Train the Model
+```bash
+python model/train_model.py
+```
+### 4. Start XAMPP
+- Start Apache
+- Start MySQL
+### 5. Run Project
+```bash
+http://localhost/Student_Performance_Prediction/web/index.php
+```
+  
 
 ---
 
 📊 Example Output
 
+- Prediction: A
 - Prediction: B
 - Prediction: C At-Risk Student
 
@@ -107,8 +126,8 @@ git clone https://github.com/AkarshKumar1/Student_Performance_Prediction.git
 - Implemented end-to-end ML pipeline
 - Handled data preprocessing and feature engineering
 - Compared multiple ML models
-- Evaluated models using performance metrics
-- Integrated ML model with web application
+- Evaluated models using classification metrics
+- Integrated ML model with backend and database
 
 ---
 
