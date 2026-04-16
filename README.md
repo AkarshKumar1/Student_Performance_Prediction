@@ -1,7 +1,16 @@
 # 🎓 Student Performance Prediction System
 
+## 📌 Project Overview
+
 - This project is a machine learning-based system that predicts student performance using academic scores such as reading and writing. Multiple models including Logistic Regression, Decision Tree, and Random Forest were trained and compared to select the best-performing model.
-- The system predicts student grades (A, B, C) and also identifies at-risk students based on their performance. A simple web interface is used to input data and display predictions.
+
+- The system classifies students into grade categories (A, B, C) and identifies at-risk students. It is deployed as a web application with a dashboard for tracking predictions and user inputs.
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://studentperformanceprediction.fwh.is  
 
 ---
 
@@ -13,12 +22,18 @@
   - Logistic Regression
   - Decision Tree
   - Random Forest
-- 📈 Evaluate models using:
+- 📈 Model evaluation using:
   - Accuracy
   - Confusion Matrix
   - Classification Report
-- 🗄 Store prediction results in MySQL database
-- 📋 View prediction history via dashboard
+- 🌐 Deployed ML model using Flask API (Render)
+- 🗄 Store prediction results in MySQL database (InfinityFree)
+- 📋 Interactive dashboard with:
+  - Total students count
+  - Grade-wise distribution (A / B / C)
+  - Search & filtering functionality
+  - Date & time tracking
+- 🔄 Auto-refresh dashboard (JavaScript polling)
 
 ---
 
@@ -29,7 +44,16 @@
 3. Model Training (multiple algorithms)  
 4. Model Evaluation  
 5. Best Model Selection  
-6. Prediction using trained model  
+6. Deployment using Flask API  
+7. Integration with web application  
+
+---
+
+## ⚙️ System Architecture
+
+```bash
+User → PHP Frontend → Render API → ML Model → Response → MySQL Database → Dashboard
+```
 
 ---
 
@@ -37,6 +61,9 @@
 
 ```
 STUDENT_PERFORMANCE_PREDICTION/
+│
+├── app.py
+├── requirements.txt
 │
 ├── dataset/
 │ ├── cleaned_data.csv
@@ -50,8 +77,8 @@ STUDENT_PERFORMANCE_PREDICTION/
 │
 ├── screenshots/
 │ ├── input-ui.png
-│ ├── prediction-ui.png
-│ └── dashboard-ui.png
+│ ├── prediction-ui(1).png
+│ └── dashboard-ui(1).png
 │
 ├── web/
 │ ├── dashboard.php
@@ -71,45 +98,32 @@ STUDENT_PERFORMANCE_PREDICTION/
 ![Input](screenshots/input-ui.png)
 
 ### 🔹 Prediction Output
-![Prediction](screenshots/prediction-ui.png)
+![Prediction](screenshots/prediction-ui(1).png)
 
 ### 🔹 Dashboard
-![Dashboard](screenshots/dashboard-ui.png)
+![Dashboard](screenshots/dashboard-ui(1).png)
 
 ---
 
 ## 🛠 Tech Stack
 
 - **Python** (Pandas, NumPy, Scikit-learn)
+- **Flask** (API Deployment)
 - **PHP**
 - **MySQL**
 - **HTML/CSS**
-- **JavaScript (Basic DOM manipulation for filtering)**
+- **JavaScript (DOM + Auto-refresh)**
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ Run Locally (Optional)
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/AkarshKumar1/Student_Performance_Prediction.git
-```
-### 2. Install Python Libraries
-```bash
-pip install pandas scikit-learn joblib
-```
-### 3. Train the Model
-```bash
-python model/train_model.py
-```
-### 4. Start XAMPP
-- Start Apache
-- Start MySQL
-### 5. Run Project
-```bash
-http://localhost/Student_Performance_Prediction/web/index.php
-```
-  
+1. Clone the repository  
+2. Install dependencies  
+3. Run Flask API  
+4. Start XAMPP and open the project  
+
+Or use the live demo above.
 
 ---
 
@@ -123,17 +137,36 @@ http://localhost/Student_Performance_Prediction/web/index.php
 
 🧠 Key Learnings
 
-- Implemented end-to-end ML pipeline
-- Handled data preprocessing and feature engineering
-- Compared multiple ML models
-- Evaluated models using classification metrics
-- Integrated ML model with backend and database
+- Built an end-to-end machine learning pipeline
+- Performed feature engineering and model comparison
+- Deployed ML model using Flask API
+- Integrated ML model with a web application
+- Designed a dashboard with filtering and analytics
+- Managed separate development and production environments
 
 ---
 
 🚀 Future Improvements
 
-- Add advanced visualization (graphs)
-- Deploy project online
-- Improve UI using Bootstrap
-- Add authentication system
+- Add graphical visualizations (charts)
+- Implement authentication system
+- Improve UI using modern frameworks (Bootstrap/React)
+- Deploy using a single full-stack framework (Flask/Django)
+
+---
+
+## ⚠️ Note
+
+This project is for learning/demo purposes
+
+
+---
+
+## 👤 Author
+
+Akarsh Kumar
+B.Tech (AI & ML)
+
+---
+
+⭐ If you like this project, don’t forget to star the repository!
